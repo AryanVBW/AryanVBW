@@ -1,5 +1,5 @@
 <div align="center">
-  # Hello, I'm Vivek  👋
+<h1 style="font-size: 36px; color: #FF5733;">Hello, I'm Vivek 👋</h1>
 
 I'm a passionate developer, coder, and technology geek with a knack for hacking into challenges and solving them one line of code at a time. 🚀
 
