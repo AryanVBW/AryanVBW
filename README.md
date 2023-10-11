@@ -42,7 +42,7 @@ Let's connect and collaborate on exciting projects:
 - 💼 LinkedIn: [@vivekwagadare](https://www.linkedin.com/in/vivek-wagadare-b677a9216)
 - 🐦 Twitter: [@vivekwagadare](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
 - 🌐 Web store: [Aryanshop.me](https://aryanshop.me)
-- 📷 Instagram: [@vivek_B_w](https://instagram.com/vivek_b_w?igshid=NGVhN2U2NjQ0Yg==)
+- 📷 Instagram: [@vivek](https://instagram.com/vivek_b_w?igshid=NGVhN2U2NjQ0Yg==)
 - 📷 Instagram: [@Aryan_Technologies](https://instagram.com/_aryan_technologies_?igshid=MzMyNGUyNmU2YQ==)
 
 Feel free to reach out, and let's build something amazing together! 🚀
