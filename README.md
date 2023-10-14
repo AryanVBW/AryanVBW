@@ -1,6 +1,5 @@
 
-<p align="center">
-<img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD.jpg" height="50"></p>
+
 <div align="center">
 <h1 style="font-size: 36px; color: #FF5733;">Hello, I'm Vivek 👋</h1>
 
