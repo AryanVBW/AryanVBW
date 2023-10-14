@@ -48,7 +48,7 @@ Let's connect and collaborate on exciting projects:
 - 📷 Instagram: [@Aryan_Technologies](https://instagram.com/_aryan_technologies_?igshid=MzMyNGUyNmU2YQ==)
 
 Feel free to reach out, and let's build something amazing together! 🚀
-
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
 <p align="center">
 <img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD.jpg" height="50"></p>
+
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
