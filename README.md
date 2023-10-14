@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="100">
+<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="150">
 </p>
 
 <div align="center">
