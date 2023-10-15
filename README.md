@@ -52,7 +52,7 @@ Let's connect and collaborate on exciting projects:
 - 📷 Instagram: [@Aryan_Technologies](https://instagram.com/aryan_technolog1es?igshid=MzMyNGUyNmU2YQ==)
 <p align="center">
 <br/>
-<img src="https://github.com/AryanVBW/WiFiKeyMaster/releases/download/v1/Vivek.gif">
+<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/Vivek.gif">
 <br/>
 <i> vivek</i>
 </p>
