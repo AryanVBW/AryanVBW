@@ -11,6 +11,7 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 [![Twitter Follow](https://img.shields.io/twitter/follow/yourtwitterhandle?label=Follow&style=social)](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
 <a href="https://instagram.com/vivekbw"><img src="https://img.shields.io/badge/Instagram-Follow%20@vivekbw-E1306C"/></a>
 </div>
+<a href="https://instagram.com/aryan_technolog1es"><img src="https://img.shields.io/badge/Instagram-Follow%20@aryan_technolog1es-E1306C"/></a>
 
 ## About Me
 
