@@ -55,7 +55,10 @@ Let's connect and collaborate on exciting projects:
 - 🌐 Web store: [Aryanshop.me](https://aryanshop.me)
 - 📷 Instagram: [@vivek](https://instagram.com/vivek_b_w?igshid=NGVhN2U2NjQ0Yg==)
 - 📷 Instagram: [@Aryan_Technologies](https://instagram.com/aryan_technolog1es?igshid=MzMyNGUyNmU2YQ==)
-
+<p align="center"> 
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
+</p>
 Feel free to reach out, and let's build something amazing together! 🚀
 <p align="center">
 <img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD-removebg-preview.png" height="50"></p>
