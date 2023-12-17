@@ -57,8 +57,8 @@ Let's connect and collaborate on exciting projects:
 - 💼 LinkedIn: [@vivekwagadare](https://www.linkedin.com/in/vivek-wagadare-b677a9216)
 - 🐦 Twitter: [@vivekwagadare](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
 - 🌐 Web store: [Aryanshop.me](https://aryanshop.me)
-- <img src="https://raw.githubusercontent.com/AryanVBW/ANDRO/main/nodejs%20(1).png" height="10"> Instagram: [@vivek](https://instagram.com/vivekbw?igshid=NGVhN2U2NjQ0Yg==)
-- <img src="https://raw.githubusercontent.com/AryanVBW/ANDRO/main/nodejs%20(1).png" height="10"> Instagram: [@Aryan_Technologies](https://instagram.com/aryan_technolog1es?igshid=MzMyNGUyNmU2YQ==)
+- <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="10"> Instagram: [@vivek](https://instagram.com/vivekbw?igshid=NGVhN2U2NjQ0Yg==)
+- <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="10"> Instagram: [@Aryan_Technologies](https://instagram.com/aryan_technolog1es?igshid=MzMyNGUyNmU2YQ==)
 
 Feel free to reach out, and let's build something amazing together! 🚀
 <p align="center">
