@@ -19,7 +19,7 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
   Visitor count<br>
   <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
 </p>
-<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/Vivek.gif">
+<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/VivekT.gif">
 <br/>
 
 </p>
