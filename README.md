@@ -7,11 +7,6 @@
 </h2>
 
 
-<h2 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=9B72FF&random=false&width=800&lines=I'm+a+passionate+developer%2C+coder%2C+and+technology+geek+with+a+knack+for+hacking+into+challenges+and+solving+them+one+line+of+code+at+a+time.+🚀" alt="Typing SVG" />
-</h2>
-
-
 I'm a passionate developer, coder, and technology geek with a knack for hacking into challenges and solving them one line of code at a time. 🚀
 
 [![GitHub followers](https://img.shields.io/github/followers/yourusername?label=Follow&style=social)](https://github.com/Aryanvbw)
