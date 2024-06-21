@@ -66,6 +66,9 @@ Feel free to reach out, and let's build something amazing together! 🚀
 <p align="center">
 <img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD-removebg-preview.png" height="50"></p>
 
+[![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
+
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=AryanVBW&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+
 ![](https://github-contributor-stats.vercel.app/api?username=AryanVBW&limit=5&theme=dark&combine_all_yearly_contributions=true)
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
