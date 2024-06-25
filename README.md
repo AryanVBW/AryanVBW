@@ -55,10 +55,10 @@ Here are a few projects I'm proud of:
 
 Let's connect and collaborate on exciting projects:
 
-- 📧 Email: [vivek@aryanvbw.tech](mailto:vivek@aryanvbw.tech)
+- 📧 Email: [vivek@aryanvbw.live](mailto:vivek@aryanvbw.live)
 - 💼 LinkedIn: [@vivekwagadare](https://www.linkedin.com/in/vivek-wagadare-b677a9216)
 - 🐦 Twitter: [@vivekwagadare](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
-- 🌐 Web store: [Aryanshop.me](https://aryanshop.me)
+- 🌐 Web store: [TEch-Shop](https://view.aryanvbw.live)
 - <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@vivek](https://instagram.com/vivekbw?igshid=NGVhN2U2NjQ0Yg==)
 - <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@Aryan_Technologies](https://instagram.com/aryan_technolog1es?igshid=MzMyNGUyNmU2YQ==)
 
