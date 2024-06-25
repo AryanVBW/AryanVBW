@@ -29,7 +29,7 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 
 - 🔭 I'm currently working on https://aryanvbw.github.io/
 - 🌱 I'm constantly learning and exploring new technologies and tools.
-- 📫 How to reach me: [admin@aryanvbw.tech](mailto:admin@aryanvbw.tech)
+- 📫 How to reach me: [admin@aryanvbw.live](mailto:admin@aryanvbw.live)
 - 😄 Pronouns: he
 
 ## Tech Stack
