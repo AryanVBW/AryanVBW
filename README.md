@@ -29,7 +29,7 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 
 - 🔭 I'm currently working on https://aryanvbw.github.io/
 - 🌱 I'm constantly learning and exploring new technologies and tools.
-- 📫 How to reach me: [admin@aryanvbw.live](mailto:admin@aryanvbw.live)
+- 📫 How to reach me: [vivek.AryanVBW@gmail.com](mailto:vivek.aryanvbw@gmail.com)
 - 😄 Pronouns: he
 
 ## Tech Stack
@@ -55,7 +55,7 @@ Here are a few projects I'm proud of:
 
 Let's connect and collaborate on exciting projects:
 
-- 📧 Email: [vivek@aryanvbw.live](mailto:vivek@aryanvbw.live)
+- 📧 Email: [vivek.AryanVBW@gmail.com](mailto:vivek.aryanvbw@gmail.com)
 - 💼 LinkedIn: [@vivekwagadare](https://www.linkedin.com/in/vivek-wagadare-b677a9216)
 - 🐦 Twitter: [@vivekwagadare](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
 - 🌐 Web store: [TEch-Shop](https://view.aryanvbw.live)
