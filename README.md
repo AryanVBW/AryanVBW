@@ -56,7 +56,7 @@ Here are a few projects I'm proud of:
 Let's connect and collaborate on exciting projects:
 
 - 📧 Email: [my@gmail.com](mailto:vivek.aryanvbw@gmail.com)
-- - 📧 Business Email: [Business.Mail](mailto:admin@AryanVBW.live)
+- 📧 Business Email: [Business.Mail](mailto:admin@AryanVBW.live)
 - 💼 LinkedIn: [@vivekwagadare](https://www.linkedin.com/in/vivek-wagadare-b677a9216)
 - 🐦 Twitter: [@vivekwagadare](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
 - 🌐 Web store: [TEch-Shop](https://view.aryanvbw.live)
