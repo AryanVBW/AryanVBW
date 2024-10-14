@@ -17,6 +17,7 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 </div>
 <p align="center">
 <br/>
+  <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
   <p align="center"> 
   Visitor count<br>
   <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
@@ -25,6 +26,8 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 <br/>
 
 </p>
+<img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
+
 ## About Me
 
 - 🔭 I'm currently working on https://vivek.aryanvbw.live
