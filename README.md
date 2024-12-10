@@ -18,13 +18,9 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 <p align="center">
 <br/>
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
-  <p align="center"> 
-  Visitor count<br>
-  <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
+<p align="center">
+<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/v.png">
 </p>
-<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/VivekT.gif">
-<br/>
-
 </p>
 <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 
@@ -80,7 +76,10 @@ Feel free to reach out, and let's build something amazing together! 🚀
 <div style="display: flex; justify-content: space-between;">
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=AryanVBW&theme=aura" alt="GitHub Stats" width="45%" />
 </div>
-
+<p align="center"> 
+  Visitor count<br>
+  <img src="https://profile-counter.glitch.me/Aryanvbw/count.svg" />
+</p>
 
 [![GitHub stats](https://github-readme-stats.vercel.app/api?username=aryanvbw&show_icons=true&theme=dark)](https://github.com/aryanvbw)
 
