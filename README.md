@@ -69,7 +69,7 @@ Feel free to reach out, and let's build something amazing together! 🚀
 <img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD-removebg-preview.png" height="50"></p>
 
 [![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=AryanVBW&bg_color=000000&color=53f547&line=65f207&point=2c42ed&area=true&hide_border=true)](https://github.com/AryanVBW/github-readme-activity-graph)
-<a href="https://github.com/AryanVBW">
+<!-- <a href="https://github.com/AryanVBW">
   <img align="center" width="49%" src="./metrics-main.svg" />
 </a>
 <a href="https://github.com/AryanVBW">
