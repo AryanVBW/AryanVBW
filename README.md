@@ -69,8 +69,14 @@ Feel free to reach out, and let's build something amazing together! 🚀
 <img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD-removebg-preview.png" height="50"></p>
 
 [![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=AryanVBW&bg_color=000000&color=53f547&line=65f207&point=2c42ed&area=true&hide_border=true)](https://github.com/AryanVBW/github-readme-activity-graph)
+<a href="https://github.com/AryanVBW">
+  <img align="center" width="49%" src="./metrics-main.svg" />
+</a>
+<a href="https://github.com/AryanVBW">
+  <img align="center" width="49%" src="./metrics-lang-notable.svg" />
+</a>
 
- <div style="display: flex; justify-content: space-between;">
+ <!-- <div style="display: flex; justify-content: space-between;">
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AryanVBW&theme=aura" alt="Repos per Language" width="45%" />
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=AryanVBW&theme=aura" alt="Most Commit Language" width="45%" />
 </div>
@@ -88,4 +94,4 @@ Feel free to reach out, and let's build something amazing together! 🚀
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=AryanVBW&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 ![](https://github-contributor-stats.vercel.app/api?username=AryanVBW&limit=5&theme=dark&combine_all_yearly_contributions=true)
-
+-->
