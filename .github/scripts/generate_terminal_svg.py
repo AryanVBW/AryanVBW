@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 import os
-import json
 import requests
 import svgwrite
 from github import Github
 from datetime import datetime
 
 # GitHub Terminal SVG Generator
-# This script fetches GitHub stats and generates an interactive SVG terminal
 
 def get_github_stats(username):
     """Fetch GitHub stats for the given username"""

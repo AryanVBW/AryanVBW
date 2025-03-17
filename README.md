@@ -26,9 +26,9 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
   <img src="terminal.svg" alt="Interactive Terminal" width="800" height="500">
 </div>
 
-<p align="center">
+<!-- <p align="center">
 <img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/v.png">
-</p>
+</p> -->
 <p align="center">
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 </p>
