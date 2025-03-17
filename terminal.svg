@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="500" version="1.1" width="800">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="550" version="1.1" width="800">
   <defs>
     <style type="text/css"><![CDATA[
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
@@ -82,47 +82,58 @@
         }
     ]]></style>
   </defs>
-  <rect class="terminal-bg" height="500" width="800" x="0" y="0"/>
+  <rect class="terminal-bg" height="550" id="terminal-bg" width="800" x="0" y="0"/>
   <rect class="terminal-header" height="30" width="800" x="0" y="0"/>
   <circle class="terminal-button close-button" cx="20" cy="15" r="1"/>
   <circle class="terminal-button minimize-button" cx="45" cy="15" r="1"/>
   <circle class="terminal-button maximize-button" cx="70" cy="15" r="1"/>
   <text class="terminal-title" text-anchor="middle" x="400.0" y="20">AryanVBW's GitHub Terminal</text>
-  <text class="terminal welcome" x="20" y="60">Welcome to GitHub Terminal!</text>
+  <text class="terminal welcome" x="20" y="60">Welcome to vivek@github Terminal!</text>
   <text class="terminal info" x="20" y="80">Type a command below or click on a suggested command:</text>
-  <g class="command-button" onclick="showCommand('help')">
+  <g class="command-button" onclick="executeCommand('help')">
     <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="20" y="110.0"/>
     <text class="terminal command" text-anchor="middle" x="70.0" y="130.0">help</text>
   </g>
-  <g class="command-button" onclick="showCommand('whoami')">
+  <g class="command-button" onclick="executeCommand('whoami')">
     <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="130" y="110.0"/>
     <text class="terminal command" text-anchor="middle" x="180.0" y="130.0">whoami</text>
   </g>
-  <g class="command-button" onclick="showCommand('stats')">
+  <g class="command-button" onclick="executeCommand('stats')">
     <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="240" y="110.0"/>
     <text class="terminal command" text-anchor="middle" x="290.0" y="130.0">stats</text>
   </g>
-  <g class="command-button" onclick="showCommand('repos')">
+  <g class="command-button" onclick="executeCommand('repos')">
     <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="20" y="150.0"/>
     <text class="terminal command" text-anchor="middle" x="70.0" y="170.0">repos</text>
   </g>
-  <g class="command-button" onclick="showCommand('skills')">
+  <g class="command-button" onclick="executeCommand('skills')">
     <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="130" y="150.0"/>
     <text class="terminal command" text-anchor="middle" x="180.0" y="170.0">skills</text>
   </g>
-  <g class="command-button" onclick="showCommand('projects')">
+  <g class="command-button" onclick="executeCommand('projects')">
     <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="240" y="150.0"/>
     <text class="terminal command" text-anchor="middle" x="290.0" y="170.0">projects</text>
   </g>
-  <g class="command-button" onclick="showCommand('contact')">
+  <g class="command-button" onclick="executeCommand('contact')">
     <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="20" y="190.0"/>
     <text class="terminal command" text-anchor="middle" x="70.0" y="210.0">contact</text>
   </g>
-  <text class="terminal prompt" x="20" y="250.0">$ </text>
-  <rect fill="#c9d1d9" height="18" width="8" x="35" y="236.0">
+  <rect fill="#0d1117" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="780" x="10" y="505"/>
+  <text class="terminal prompt" x="20" y="525">$ </text>
+  <text class="terminal command" id="input-text" x="35" y="525"/>
+  <rect fill="#c9d1d9" height="18" id="cursor" width="2" x="35" y="513">
     <animate attributeName="opacity" dur="1s" repeatCount="indefinite" values="1;0;1"/>
   </rect>
   <script><![CDATA[
+        // Make SVG focusable to capture keyboard events
+        document.querySelector('svg').setAttribute('tabindex', '0');
+        
+        // Current command being typed
+        let currentCommand = "";
+        let cursorPosition = 35; // Initial cursor position
+        let commandHistory = [];
+        let historyIndex = -1;
+        
         // Command output data
         const commandOutputs = {
             help: [
@@ -199,8 +210,84 @@ Studying in Newton school of Technology🚀",
         const reposList = ["1. LinuxDroid - ⭐ 357 - The most powerful security toolkit for Android: without rooting your device. Run security tools like Nmap, Metasploit, and Wireshark on your Android device without voiding your warranty. Access a wide range of penetration testing tools and utilities, right from your Android phone or tablet.","2. AiVoiceClonerPRO - ⭐ 49 - Revolutionize Your Voice with AI Voice Cloner! Transform Your Speech into Your Favorite Celebrity's or Your Customized Voice. Our Cutting-edge Tool Converts Text or Any Audio into Your Desired Voice – Your Voice, Your Way","3. Andro-CLI - ⭐ 47 - Exploitation-Framework for Android devices - Framework that allows you to search for vulnerable android devices across the world and exploit them. A Simple android remote administration tool using sockets. It uses java on the client side and python on the server side ","4. Kali-Linux-for-Android - ⭐ 44 - Transform your Android device into a cybersecurity playground with Kali Magic! 🚀","5. ANDRO - ⭐ 43 - ANDRO Unleash Mobile Security with our Android Exploitation and Analysis Tool. Identify vulnerabilities, reverse engineer apps, and fortify defenses with ease. Stay ahead of threats and redefine mobile protection today!",];
 commandOutputs.repos = commandOutputs.repos.concat(reposList);
 
-        // Function to show command output
-        function showCommand(command) {
+        // Handle keyboard input for the terminal
+        document.getElementById('terminal-bg').addEventListener('click', function() {
+            document.querySelector('svg').focus();
+        });
+        
+        document.querySelector('svg').addEventListener('keydown', function(event) {
+            // Handle Enter key (execute command)
+            if (event.key === 'Enter' && currentCommand.trim() !== '') {
+                // Add to history
+                commandHistory.unshift(currentCommand);
+                if (commandHistory.length > 10) commandHistory.pop();
+                historyIndex = -1;
+                
+                // Execute command
+                executeCommand(currentCommand);
+                currentCommand = '';
+                updateInputDisplay();
+            } 
+            // Handle Backspace key
+            else if (event.key === 'Backspace') {
+                if (currentCommand.length > 0) {
+                    currentCommand = currentCommand.substring(0, currentCommand.length - 1);
+                    updateInputDisplay();
+                }
+            }
+            // Handle Up Arrow (command history)
+            else if (event.key === 'ArrowUp') {
+                if (commandHistory.length > 0 && historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    currentCommand = commandHistory[historyIndex];
+                    updateInputDisplay();
+                }
+            }
+            // Handle Down Arrow (command history)
+            else if (event.key === 'ArrowDown') {
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    currentCommand = commandHistory[historyIndex];
+                } else if (historyIndex === 0) {
+                    historyIndex = -1;
+                    currentCommand = '';
+                }
+                updateInputDisplay();
+            }
+            // Handle Tab key (command completion)
+            else if (event.key === 'Tab') {
+                event.preventDefault();
+                const commands = Object.keys(commandOutputs);
+                const matchingCommands = commands.filter(cmd => cmd.startsWith(currentCommand));
+                
+                if (matchingCommands.length === 1) {
+                    currentCommand = matchingCommands[0];
+                    updateInputDisplay();
+                }
+            }
+            // Handle regular character input
+            else if (event.key.length === 1) {
+                currentCommand += event.key;
+                updateInputDisplay();
+            }
+        });
+        
+        // Update the input display and cursor position
+        function updateInputDisplay() {
+            // Update input text
+            const inputText = document.getElementById('input-text');
+            inputText.textContent = currentCommand;
+            
+            // Update cursor position
+            const cursor = document.getElementById('cursor');
+            cursor.setAttribute('x', (35 + currentCommand.length * 8));
+        }
+        
+        // Function to execute a command
+        function executeCommand(command) {
+            // Normalize command (trim and lowercase)
+            command = command.trim().toLowerCase();
+            
             // Clear previous output
             const outputArea = document.getElementById('output-area');
             while (outputArea.firstChild) {
@@ -210,21 +297,21 @@ commandOutputs.repos = commandOutputs.repos.concat(reposList);
             // Add command to prompt
             const promptText = document.createElementNS("http://www.w3.org/2000/svg", "text");
             promptText.setAttribute("x", "20");
-            promptText.setAttribute("y", "350");
+            promptText.setAttribute("y", "200");
             promptText.setAttribute("class", "terminal prompt");
-            promptText.textContent = "$ ";
+            promptText.textContent = "vivek@github:~$ ";
             outputArea.appendChild(promptText);
             
             const commandText = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            commandText.setAttribute("x", "35");
-            commandText.setAttribute("y", "350");
+            commandText.setAttribute("x", "135");
+            commandText.setAttribute("y", "200");
             commandText.setAttribute("class", "terminal command");
             commandText.textContent = command;
             outputArea.appendChild(commandText);
             
             // Add output
             if (commandOutputs[command]) {
-                let yPos = 380;
+                let yPos = 230;
                 commandOutputs[command].forEach(line => {
                     const outputLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
                     outputLine.setAttribute("x", "20");
@@ -234,20 +321,62 @@ commandOutputs.repos = commandOutputs.repos.concat(reposList);
                     outputArea.appendChild(outputLine);
                     yPos += 20;
                 });
+            } else if (command === 'clear') {
+                // Clear command - just clear the output area
+                return;
+            } else if (command === 'date') {
+                // Date command
+                const date = new Date().toLocaleString();
+                const dateLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                dateLine.setAttribute("x", "20");
+                dateLine.setAttribute("y", "230");
+                dateLine.setAttribute("class", "terminal output");
+                dateLine.textContent = date;
+                outputArea.appendChild(dateLine);
+            } else if (command.startsWith('echo ')) {
+                // Echo command
+                const text = command.substring(5);
+                const echoLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                echoLine.setAttribute("x", "20");
+                echoLine.setAttribute("y", "230");
+                echoLine.setAttribute("class", "terminal output");
+                echoLine.textContent = text;
+                outputArea.appendChild(echoLine);
             } else {
                 const errorLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
                 errorLine.setAttribute("x", "20");
-                errorLine.setAttribute("y", "380");
+                errorLine.setAttribute("y", "230");
                 errorLine.setAttribute("class", "terminal error");
                 errorLine.textContent = `Command not found: ${command}. Type 'help' to see available commands.`;
                 outputArea.appendChild(errorLine);
             }
         }
         
-        // Show help by default
+        // Show help by default and set up terminal
         window.onload = function() {
-            showCommand('help');
+            // Add blinking cursor animation
+            setInterval(() => {
+                const cursor = document.getElementById('cursor');
+                cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+            }, 500);
+            
+            // Show welcome message
+            executeCommand('help');
+            
+            // Focus on the SVG to enable keyboard input
+            document.querySelector('svg').focus();
+            
+            // Add a message about typing
+            const typingHint = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            typingHint.setAttribute("x", "20");
+            typingHint.setAttribute("y", height - 60);
+            typingHint.setAttribute("class", "terminal info");
+            typingHint.textContent = "Click anywhere on the terminal and start typing. Try 'help', 'whoami', 'stats', etc.";
+            document.getElementById('output-area').appendChild(typingHint);
         };
+        
+        // Make SVG focusable
+        document.querySelector('svg').setAttribute('tabindex', '0');
     ]]></script>
   <g id="output-area"/>
 </svg>

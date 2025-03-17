@@ -127,7 +127,7 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
     """Create an SVG terminal with GitHub stats"""
     # SVG dimensions
     width = 800
-    height = 500
+    height = 550
     
     # Create SVG document
     dwg = svgwrite.Drawing(output_path, (width, height), debug=True)
@@ -215,7 +215,7 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
     """))
     
     # Terminal background
-    dwg.add(dwg.rect((0, 0), (width, height), class_="terminal-bg"))
+    dwg.add(dwg.rect((0, 0), (width, height), class_="terminal-bg", id="terminal-bg"))
     
     # Terminal header
     dwg.add(dwg.rect((0, 0), (width, 30), class_="terminal-header"))
@@ -233,7 +233,7 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
     line_height = 20  # Height of each line
     
     # Welcome message
-    dwg.add(dwg.text("Welcome to GitHub Terminal!", (20, y_pos), class_="terminal welcome"))
+    dwg.add(dwg.text("Welcome to vivek@github Terminal!", (20, y_pos), class_="terminal welcome"))
     y_pos += line_height
     
     dwg.add(dwg.text("Type a command below or click on a suggested command:", (20, y_pos), class_="terminal info"))
@@ -264,7 +264,7 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
         y = y_pos + row * (button_height + button_margin)
         
         # Button group with hover effect
-        button = dwg.g(class_="command-button", onclick=f"showCommand('{cmd}')")
+        button = dwg.g(class_="command-button", onclick=f"executeCommand('{cmd}')")
         
         # Button background
         button.add(dwg.rect((x, y), (button_width, button_height), 
@@ -280,11 +280,16 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
     # Move y position past the buttons
     y_pos += (len(commands) // buttons_per_row + 1) * (button_height + button_margin) + line_height
     
-    # Command prompt
-    dwg.add(dwg.text("$ ", (20, y_pos), class_="terminal prompt"))
+    # Command prompt area (fixed at bottom)
+    prompt_y = height - 40
+    dwg.add(dwg.rect((10, prompt_y - 5), (width - 20, 30), rx=5, ry=5, fill="#0d1117", stroke="#30363d", stroke_width=1))
+    dwg.add(dwg.text("$ ", (20, prompt_y + 15), class_="terminal prompt"))
+    
+    # Input text area
+    dwg.add(dwg.text("", (35, prompt_y + 15), class_="terminal command", id="input-text"))
     
     # Blinking cursor
-    cursor = dwg.rect((35, y_pos - 14), (8, 18), fill="#c9d1d9")
+    cursor = dwg.rect((35, prompt_y + 3), (2, 18), fill="#c9d1d9", id="cursor")
     cursor.add(dwg.animate("opacity", "1;0;1", dur="1s", repeatCount="indefinite"))
     dwg.add(cursor)
     
@@ -293,6 +298,15 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
     
     # Add JavaScript for interactivity
     script = dwg.script(content="""
+        // Make SVG focusable to capture keyboard events
+        document.querySelector('svg').setAttribute('tabindex', '0');
+        
+        // Current command being typed
+        let currentCommand = "";
+        let cursorPosition = 35; // Initial cursor position
+        let commandHistory = [];
+        let historyIndex = -1;
+        
         // Command output data
         const commandOutputs = {
             help: [
@@ -377,8 +391,84 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
     
     # Continue with the interactive script
     script.append("""
-        // Function to show command output
-        function showCommand(command) {
+        // Handle keyboard input for the terminal
+        document.getElementById('terminal-bg').addEventListener('click', function() {
+            document.querySelector('svg').focus();
+        });
+        
+        document.querySelector('svg').addEventListener('keydown', function(event) {
+            // Handle Enter key (execute command)
+            if (event.key === 'Enter' && currentCommand.trim() !== '') {
+                // Add to history
+                commandHistory.unshift(currentCommand);
+                if (commandHistory.length > 10) commandHistory.pop();
+                historyIndex = -1;
+                
+                // Execute command
+                executeCommand(currentCommand);
+                currentCommand = '';
+                updateInputDisplay();
+            } 
+            // Handle Backspace key
+            else if (event.key === 'Backspace') {
+                if (currentCommand.length > 0) {
+                    currentCommand = currentCommand.substring(0, currentCommand.length - 1);
+                    updateInputDisplay();
+                }
+            }
+            // Handle Up Arrow (command history)
+            else if (event.key === 'ArrowUp') {
+                if (commandHistory.length > 0 && historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    currentCommand = commandHistory[historyIndex];
+                    updateInputDisplay();
+                }
+            }
+            // Handle Down Arrow (command history)
+            else if (event.key === 'ArrowDown') {
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    currentCommand = commandHistory[historyIndex];
+                } else if (historyIndex === 0) {
+                    historyIndex = -1;
+                    currentCommand = '';
+                }
+                updateInputDisplay();
+            }
+            // Handle Tab key (command completion)
+            else if (event.key === 'Tab') {
+                event.preventDefault();
+                const commands = Object.keys(commandOutputs);
+                const matchingCommands = commands.filter(cmd => cmd.startsWith(currentCommand));
+                
+                if (matchingCommands.length === 1) {
+                    currentCommand = matchingCommands[0];
+                    updateInputDisplay();
+                }
+            }
+            // Handle regular character input
+            else if (event.key.length === 1) {
+                currentCommand += event.key;
+                updateInputDisplay();
+            }
+        });
+        
+        // Update the input display and cursor position
+        function updateInputDisplay() {
+            // Update input text
+            const inputText = document.getElementById('input-text');
+            inputText.textContent = currentCommand;
+            
+            // Update cursor position
+            const cursor = document.getElementById('cursor');
+            cursor.setAttribute('x', (35 + currentCommand.length * 8));
+        }
+        
+        // Function to execute a command
+        function executeCommand(command) {
+            // Normalize command (trim and lowercase)
+            command = command.trim().toLowerCase();
+            
             // Clear previous output
             const outputArea = document.getElementById('output-area');
             while (outputArea.firstChild) {
@@ -388,21 +478,21 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
             // Add command to prompt
             const promptText = document.createElementNS("http://www.w3.org/2000/svg", "text");
             promptText.setAttribute("x", "20");
-            promptText.setAttribute("y", "350");
+            promptText.setAttribute("y", "200");
             promptText.setAttribute("class", "terminal prompt");
-            promptText.textContent = "$ ";
+            promptText.textContent = "vivek@github:~$ ";
             outputArea.appendChild(promptText);
             
             const commandText = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            commandText.setAttribute("x", "35");
-            commandText.setAttribute("y", "350");
+            commandText.setAttribute("x", "135");
+            commandText.setAttribute("y", "200");
             commandText.setAttribute("class", "terminal command");
             commandText.textContent = command;
             outputArea.appendChild(commandText);
             
             // Add output
             if (commandOutputs[command]) {
-                let yPos = 380;
+                let yPos = 230;
                 commandOutputs[command].forEach(line => {
                     const outputLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
                     outputLine.setAttribute("x", "20");
@@ -412,20 +502,62 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
                     outputArea.appendChild(outputLine);
                     yPos += 20;
                 });
+            } else if (command === 'clear') {
+                // Clear command - just clear the output area
+                return;
+            } else if (command === 'date') {
+                // Date command
+                const date = new Date().toLocaleString();
+                const dateLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                dateLine.setAttribute("x", "20");
+                dateLine.setAttribute("y", "230");
+                dateLine.setAttribute("class", "terminal output");
+                dateLine.textContent = date;
+                outputArea.appendChild(dateLine);
+            } else if (command.startsWith('echo ')) {
+                // Echo command
+                const text = command.substring(5);
+                const echoLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                echoLine.setAttribute("x", "20");
+                echoLine.setAttribute("y", "230");
+                echoLine.setAttribute("class", "terminal output");
+                echoLine.textContent = text;
+                outputArea.appendChild(echoLine);
             } else {
                 const errorLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
                 errorLine.setAttribute("x", "20");
-                errorLine.setAttribute("y", "380");
+                errorLine.setAttribute("y", "230");
                 errorLine.setAttribute("class", "terminal error");
                 errorLine.textContent = `Command not found: ${command}. Type 'help' to see available commands.`;
                 outputArea.appendChild(errorLine);
             }
         }
         
-        // Show help by default
+        // Show help by default and set up terminal
         window.onload = function() {
-            showCommand('help');
+            // Add blinking cursor animation
+            setInterval(() => {
+                const cursor = document.getElementById('cursor');
+                cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+            }, 500);
+            
+            // Show welcome message
+            executeCommand('help');
+            
+            // Focus on the SVG to enable keyboard input
+            document.querySelector('svg').focus();
+            
+            // Add a message about typing
+            const typingHint = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            typingHint.setAttribute("x", "20");
+            typingHint.setAttribute("y", height - 60);
+            typingHint.setAttribute("class", "terminal info");
+            typingHint.textContent = "Click anywhere on the terminal and start typing. Try 'help', 'whoami', 'stats', etc.";
+            document.getElementById('output-area').appendChild(typingHint);
         };
+        
+        // Make SVG focusable
+        document.querySelector('svg').setAttribute('tabindex', '0');
     """)
     
     dwg.add(script)

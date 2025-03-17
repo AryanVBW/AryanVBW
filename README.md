@@ -35,7 +35,16 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 
 ## 💻 Interactive Terminal
 
-Try out the interactive terminal above! Click on any command button to see the output. The terminal is updated every 6 hours with my latest GitHub stats.
+Try out the fully interactive terminal above! Here's how to use it:
+
+- **Click on the terminal** to activate it and start typing commands
+- **Type commands** like `help`, `whoami`, `stats`, `repos`, `skills`, `projects`, or `contact`
+- **Press Enter** to execute commands
+- **Use Up/Down arrows** to navigate through command history
+- **Press Tab** for command auto-completion
+- **Try additional commands** like `clear`, `date`, and `echo [text]`
+
+The terminal is updated every 6 hours with my latest GitHub stats.
 
 ## 👨‍💻 About Me
 
