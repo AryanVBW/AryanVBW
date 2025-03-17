@@ -1,20 +1,26 @@
-<p align="center">
-<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="80">
-</p>
 <div align="center">
-<h2 style="text-align: center; color: #0074D9;">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0074D9&random=false&width=435&lines=Hello%2C+I'm+Vivek+Wagdare+👋" alt="Typing SVG" />
-</h2>
 
+<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="100">
 
-I'm a passionate developer, coder, and technology geek with a knack for hacking into challenges and solving them one line of code at a time. 🚀
+# <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=00BFFF&center=true&vCenter=true&random=false&width=435&lines=Hello%2C+I'm+Vivek+Wagdare+%F0%9F%91%8B;Welcome+to+my+GitHub!;Passionate+Developer;Cybersecurity+Enthusiast;Tech+Explorer" alt="Typing SVG" />
 
-[![GitHub followers](https://img.shields.io/github/followers/AryanVBW?label=Follow&style=social)](https://github.com/AryanVBW)
-[![Twitter Follow](https://img.shields.io/twitter/follow/vivekwagadare?label=Follow&style=social)](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/vivek-wagadare)
-[![Twitter](https://img.shields.io/badge/-Twitter-blue?style=flat&logo=Twitter&logoColor=white)](https://twitter.com/vivekwagadare)
-<a href="https://instagram.com/vivekbw"><img src="https://img.shields.io/badge/Instagram-Follow%20@Vivek-E1306C"/></a>
-<a href="https://instagram.com/aryan_technolog1es"><img src="https://img.shields.io/badge/Instagram-Follow%20@Aryan_Technologies-E1306C"/></a>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00BFFF&center=true&vCenter=true&width=435&lines=Developer+%7C+Hacker+%7C+Creator)](https://github.com/AryanVBW)
+
+</div>
+
+<p align="center">
+I'm a passionate developer, cybersecurity enthusiast, and technology explorer with a knack for hacking into challenges and solving them one line of code at a time. 🚀
+</p>
+
+<div align="center">
+
+[![GitHub followers](https://img.shields.io/github/followers/AryanVBW?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=20B2AA)](https://github.com/AryanVBW)
+[![Twitter Follow](https://img.shields.io/twitter/follow/vivekwagadare?style=for-the-badge&logo=twitter&logoColor=white&labelColor=1DA1F2&color=1DA1F2)](https://x.com/vivekwagadare)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/vivek-wagadare)
+[![Instagram @Vivek](https://img.shields.io/badge/Instagram-@Vivek-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/vivekbw)
+[![Instagram @Aryan_Technologies](https://img.shields.io/badge/Instagram-@Aryan_Technologies-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/aryan_technolog1es)
+[![Website](https://img.shields.io/badge/Website-AryanVBW.live-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://vivek.aryanvbw.live)
+
 </div>
 
 <p align="center">
@@ -35,16 +41,43 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 
 ## 💻 Interactive Terminal
 
-Try out the fully interactive terminal above! Here's how to use it:
+<div align="center">
 
-- **Click on the terminal** to activate it and start typing commands
-- **Type commands** like `help`, `whoami`, `stats`, `repos`, `skills`, `projects`, or `contact`
-- **Press Enter** to execute commands
-- **Use Up/Down arrows** to navigate through command history
-- **Press Tab** for command auto-completion
-- **Try additional commands** like `clear`, `date`, and `echo [text]`
+[![Terminal Demo](https://img.shields.io/badge/✨-Interactive_Terminal-00BFFF?style=for-the-badge&logo=gnometerminal&logoColor=white)](https://github.com/AryanVBW)
+[![Updated](https://img.shields.io/badge/Updated-Every_6_Hours-brightgreen?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/AryanVBW/AryanVBW/actions)
 
-The terminal is updated every 6 hours with my latest GitHub stats.
+</div>
+
+The animated terminal above showcases my GitHub profile in a unique way! It's designed to simulate a real terminal experience with:
+
+### 🚀 Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `help` | Display available commands |
+| `whoami` | Learn about me |
+| `stats` | View my GitHub statistics |
+| `skills` | See my technical skills |
+| `repos` | List my top repositories |
+| `projects` | View my featured projects |
+| `contact` | Get my contact information |
+| `clear` | Clear the terminal screen |
+| `date` | Display current date and time |
+| `echo [text]` | Echo back your text |
+
+### 🌟 Terminal Features
+
+- **Auto-typing Demo**: Watch as commands are automatically typed and executed
+- **Animated Output**: Smooth animations when displaying command results
+- **Modern UI**: macOS-style terminal design with window controls
+- **Real-time Stats**: Updated every 6 hours with my latest GitHub activity
+
+<details>
+<summary>💡 How it works</summary>
+
+This terminal is built using SVG with embedded JavaScript animations. It fetches real-time data from the GitHub API and presents it in an interactive terminal format. The SVG is generated using a Python script that runs via GitHub Actions every 6 hours.
+
+</details>
 
 ## 👨‍💻 About Me
 

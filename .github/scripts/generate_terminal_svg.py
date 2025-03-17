@@ -132,98 +132,201 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
     # Create SVG document
     dwg = svgwrite.Drawing(output_path, (width, height), debug=True)
     
-    # Define styles
+    # Define styles with animations
     dwg.defs.add(dwg.style("""
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes gradient {
+            0% { fill: #00ff00; }
+            25% { fill: #00ffff; }
+            50% { fill: #0088ff; }
+            75% { fill: #8800ff; }
+            100% { fill: #00ff00; }
+        }
+        
+        @keyframes glow {
+            0% { filter: drop-shadow(0 0 2px rgba(0, 255, 0, 0.7)); }
+            50% { filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.9)); }
+            100% { filter: drop-shadow(0 0 2px rgba(0, 255, 0, 0.7)); }
+        }
         
         .terminal {
             font-family: 'Fira Code', monospace;
             font-size: 14px;
         }
+        
         .terminal-bg {
             fill: #0d1117;
             rx: 10;
             ry: 10;
+            filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.5));
         }
+        
         .terminal-header {
             fill: #161b22;
             rx: 10 10 0 0;
             ry: 10 10 0 0;
         }
+        
         .terminal-title {
             fill: #c9d1d9;
             font-size: 14px;
             font-weight: bold;
         }
+        
         .terminal-button {
             r: 6;
         }
+        
+        .terminal-button:hover {
+            animation: pulse 0.5s infinite;
+        }
+        
         .close-button {
             fill: #f85149;
         }
+        
         .minimize-button {
             fill: #fac24c;
         }
+        
         .maximize-button {
             fill: #58a6ff;
         }
+        
         .terminal-text {
             fill: #c9d1d9;
             font-size: 14px;
+            animation: fadeIn 0.5s ease-in;
         }
+        
         .prompt {
             fill: #7ee787;
             font-weight: bold;
         }
+        
         .command {
             fill: #e6edf3;
         }
+        
         .output {
             fill: #a5d6ff;
+            animation: fadeIn 0.5s ease-in;
         }
+        
         .error {
             fill: #f85149;
+            animation: fadeIn 0.3s ease-in;
         }
+        
         .help {
             fill: #d2a8ff;
         }
+        
         .stats {
             fill: #79c0ff;
         }
+        
         .repos {
             fill: #a5d6ff;
         }
+        
         .contact {
             fill: #ffab70;
         }
+        
         .skills {
             fill: #7ee787;
         }
+        
         .projects {
             fill: #d2a8ff;
         }
+        
         .about {
             fill: #79c0ff;
         }
+        
         .welcome {
             fill: #7ee787;
             font-weight: bold;
+            animation: fadeIn 1s ease-in;
         }
+        
         .info {
             fill: #79c0ff;
         }
+        
+        .cursor {
+            animation: blink 1s infinite;
+        }
+        
+        .highlight {
+            animation: gradient 8s infinite;
+        }
+        
+        .glow {
+            animation: glow 2s infinite;
+        }
     """))
     
-    # Terminal background
+    # Terminal background with enhanced design
     dwg.add(dwg.rect((0, 0), (width, height), class_="terminal-bg", id="terminal-bg"))
     
-    # Terminal header
-    dwg.add(dwg.rect((0, 0), (width, 30), class_="terminal-header"))
+    # Terminal header with gradient
+    header = dwg.rect((0, 0), (width, 30), class_="terminal-header")
+    header.set_desc(title="Terminal Header")
+    dwg.add(header)
     
-    # Terminal buttons
-    dwg.add(dwg.circle((20, 15), class_="terminal-button close-button"))
-    dwg.add(dwg.circle((45, 15), class_="terminal-button minimize-button"))
-    dwg.add(dwg.circle((70, 15), class_="terminal-button maximize-button"))
+    # Add bottom corners fix
+    dwg.add(dwg.rect((0, 25), (width, 5), fill="#161b22"))
+    
+    # Terminal buttons with hover effect
+    close_btn = dwg.circle((20, 15), class_="terminal-button close-button")
+    close_btn.set_desc(title="Close")
+    dwg.add(close_btn)
+    
+    minimize_btn = dwg.circle((45, 15), class_="terminal-button minimize-button")
+    minimize_btn.set_desc(title="Minimize")
+    dwg.add(minimize_btn)
+    
+    maximize_btn = dwg.circle((70, 15), class_="terminal-button maximize-button")
+    maximize_btn.set_desc(title="Maximize")
+    dwg.add(maximize_btn)
+    
+    # Terminal title
+    title = dwg.text("vivek@github: ~/terminal", insert=(width/2, 18), 
+                    text_anchor="middle", class_="terminal-title")
+    dwg.add(title)
+    
+    # Add a glowing hint about interactivity
+    hint_bg = dwg.rect((width-250, 40), (240, 30), rx=5, ry=5, fill="#0064C8")
+    dwg.add(hint_bg)
+    
+    hint_text = dwg.text("✨ Interactive Terminal Demo", insert=(width-130, 60), 
+                       text_anchor="middle", class_="highlight glow")
+    dwg.add(hint_text)
     
     # Terminal title
     dwg.add(dwg.text(f"{stats['login']}'s GitHub Terminal", (width/2, 20), text_anchor="middle", class_="terminal-title"))
@@ -475,86 +578,211 @@ def create_terminal_svg(stats, output_path="terminal.svg"):
                 outputArea.removeChild(outputArea.firstChild);
             }
             
-            // Add command to prompt
+            // Add command to prompt with animation
             const promptText = document.createElementNS("http://www.w3.org/2000/svg", "text");
             promptText.setAttribute("x", "20");
-            promptText.setAttribute("y", "200");
+            promptText.setAttribute("y", "80");
             promptText.setAttribute("class", "terminal prompt");
             promptText.textContent = "vivek@github:~$ ";
+            promptText.style.opacity = 0;
             outputArea.appendChild(promptText);
             
             const commandText = document.createElementNS("http://www.w3.org/2000/svg", "text");
             commandText.setAttribute("x", "135");
-            commandText.setAttribute("y", "200");
+            commandText.setAttribute("y", "80");
             commandText.setAttribute("class", "terminal command");
             commandText.textContent = command;
+            commandText.style.opacity = 0;
             outputArea.appendChild(commandText);
             
-            // Add output
-            if (commandOutputs[command]) {
-                let yPos = 230;
-                commandOutputs[command].forEach(line => {
-                    const outputLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                    outputLine.setAttribute("x", "20");
-                    outputLine.setAttribute("y", yPos.toString());
-                    outputLine.setAttribute("class", `terminal output ${command}`);
-                    outputLine.textContent = line;
-                    outputArea.appendChild(outputLine);
-                    yPos += 20;
-                });
-            } else if (command === 'clear') {
-                // Clear command - just clear the output area
-                return;
-            } else if (command === 'date') {
-                // Date command
-                const date = new Date().toLocaleString();
-                const dateLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                dateLine.setAttribute("x", "20");
-                dateLine.setAttribute("y", "230");
-                dateLine.setAttribute("class", "terminal output");
-                dateLine.textContent = date;
-                outputArea.appendChild(dateLine);
-            } else if (command.startsWith('echo ')) {
-                // Echo command
-                const text = command.substring(5);
-                const echoLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                echoLine.setAttribute("x", "20");
-                echoLine.setAttribute("y", "230");
-                echoLine.setAttribute("class", "terminal output");
-                echoLine.textContent = text;
-                outputArea.appendChild(echoLine);
-            } else {
-                const errorLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
-                errorLine.setAttribute("x", "20");
-                errorLine.setAttribute("y", "230");
-                errorLine.setAttribute("class", "terminal error");
-                errorLine.textContent = `Command not found: ${command}. Type 'help' to see available commands.`;
-                outputArea.appendChild(errorLine);
-            }
+            // Animate the appearance
+            setTimeout(() => {
+                promptText.style.opacity = 1;
+                commandText.style.opacity = 1;
+            }, 100);
+            
+            // Add output with animation delay
+            setTimeout(() => {
+                if (commandOutputs[command]) {
+                    let yPos = 110;
+                    let delay = 100;
+                    
+                    commandOutputs[command].forEach((line, index) => {
+                        setTimeout(() => {
+                            const outputLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                            outputLine.setAttribute("x", "20");
+                            outputLine.setAttribute("y", yPos.toString());
+                            outputLine.setAttribute("class", `terminal output ${command}`);
+                            outputLine.textContent = line;
+                            outputLine.style.opacity = 0;
+                            outputArea.appendChild(outputLine);
+                            
+                            // Fade in animation
+                            setTimeout(() => {
+                                outputLine.style.opacity = 1;
+                            }, 50);
+                            
+                            yPos += 20;
+                        }, delay * index);
+                    });
+                    
+                    // After all output is shown, show a new prompt
+                    setTimeout(() => {
+                        showNewPrompt();
+                    }, delay * commandOutputs[command].length + 300);
+                    
+                } else if (command === 'clear') {
+                    // Clear command - just clear the output area
+                    showNewPrompt();
+                    return;
+                } else if (command === 'date') {
+                    // Date command
+                    const date = new Date().toLocaleString();
+                    const dateLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                    dateLine.setAttribute("x", "20");
+                    dateLine.setAttribute("y", "110");
+                    dateLine.setAttribute("class", "terminal output");
+                    dateLine.textContent = date;
+                    dateLine.style.opacity = 0;
+                    outputArea.appendChild(dateLine);
+                    
+                    setTimeout(() => {
+                        dateLine.style.opacity = 1;
+                        setTimeout(() => {
+                            showNewPrompt();
+                        }, 300);
+                    }, 100);
+                    
+                } else if (command.startsWith('echo ')) {
+                    // Echo command
+                    const text = command.substring(5);
+                    const echoLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                    echoLine.setAttribute("x", "20");
+                    echoLine.setAttribute("y", "110");
+                    echoLine.setAttribute("class", "terminal output");
+                    echoLine.textContent = text;
+                    echoLine.style.opacity = 0;
+                    outputArea.appendChild(echoLine);
+                    
+                    setTimeout(() => {
+                        echoLine.style.opacity = 1;
+                        setTimeout(() => {
+                            showNewPrompt();
+                        }, 300);
+                    }, 100);
+                    
+                } else {
+                    const errorLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                    errorLine.setAttribute("x", "20");
+                    errorLine.setAttribute("y", "110");
+                    errorLine.setAttribute("class", "terminal error");
+                    errorLine.textContent = `Command not found: ${command}. Type 'help' to see available commands.`;
+                    errorLine.style.opacity = 0;
+                    outputArea.appendChild(errorLine);
+                    
+                    setTimeout(() => {
+                        errorLine.style.opacity = 1;
+                        setTimeout(() => {
+                            showNewPrompt();
+                        }, 300);
+                    }, 100);
+                }
+            }, 200);
         }
         
-        // Show help by default and set up terminal
-        window.onload = function() {
-            // Add blinking cursor animation
-            setInterval(() => {
-                const cursor = document.getElementById('cursor');
-                cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
-            }, 500);
+        // Function to show a new prompt after command execution
+        function showNewPrompt() {
+            const outputArea = document.getElementById('output-area');
+            const lastElement = outputArea.lastElementChild;
+            const lastY = lastElement ? parseInt(lastElement.getAttribute('y')) + 30 : 140;
             
-            // Show welcome message
-            executeCommand('help');
+            const newPrompt = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            newPrompt.setAttribute("x", "20");
+            newPrompt.setAttribute("y", lastY.toString());
+            newPrompt.setAttribute("class", "terminal prompt");
+            newPrompt.textContent = "vivek@github:~$ ";
+            newPrompt.style.opacity = 0;
+            outputArea.appendChild(newPrompt);
+            
+            setTimeout(() => {
+                newPrompt.style.opacity = 1;
+                
+                // Add blinking cursor at the new prompt
+                const newCursor = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                newCursor.setAttribute("x", "135");
+                newCursor.setAttribute("y", (lastY - 15).toString());
+                newCursor.setAttribute("width", "8");
+                newCursor.setAttribute("height", "16");
+                newCursor.setAttribute("fill", "#FFFFFF");
+                newCursor.setAttribute("class", "cursor");
+                outputArea.appendChild(newCursor);
+                
+                // After a delay, show typing animation for a new command
+                setTimeout(() => {
+                    // Choose a random command to demonstrate
+                    const demoCommands = ['stats', 'whoami', 'skills', 'projects'];
+                    const randomCommand = demoCommands[Math.floor(Math.random() * demoCommands.length)];
+                    
+                    // Create text element for the typing command
+                    const typingCommand = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                    typingCommand.setAttribute("x", "135");
+                    typingCommand.setAttribute("y", lastY.toString());
+                    typingCommand.setAttribute("class", "terminal command");
+                    typingCommand.textContent = "";
+                    outputArea.appendChild(typingCommand);
+                    
+                    // Simulate typing
+                    let i = 0;
+                    const typeInterval = setInterval(() => {
+                        if (i < randomCommand.length) {
+                            typingCommand.textContent += randomCommand.charAt(i);
+                            newCursor.setAttribute("x", (135 + typingCommand.textContent.length * 8).toString());
+                            i++;
+                        } else {
+                            clearInterval(typeInterval);
+                            setTimeout(() => {
+                                // Execute the command
+                                executeCommand(randomCommand);
+                            }, 500);
+                        }
+                    }, 150);
+                }, 1000);
+            }, 200);
+        }
+        
+        // Show help by default and set up terminal with typing animation
+        window.onload = function() {
+            // Show welcome message with typing effect
+            setTimeout(() => {
+                typeCommand('help', () => {
+                    executeCommand('help');
+                });
+            }, 500);
             
             // Focus on the SVG to enable keyboard input
             document.querySelector('svg').focus();
-            
-            // Add a message about typing
-            const typingHint = document.createElementNS("http://www.w3.org/2000/svg", "text");
-            typingHint.setAttribute("x", "20");
-            typingHint.setAttribute("y", height - 60);
-            typingHint.setAttribute("class", "terminal info");
-            typingHint.textContent = "Click anywhere on the terminal and start typing. Try 'help', 'whoami', 'stats', etc.";
-            document.getElementById('output-area').appendChild(typingHint);
         };
+        
+        // Function to simulate typing
+        function typeCommand(command, callback) {
+            let i = 0;
+            const inputText = document.getElementById('input-text');
+            const typeInterval = setInterval(() => {
+                if (i < command.length) {
+                    inputText.textContent += command.charAt(i);
+                    // Update cursor position
+                    const cursor = document.getElementById('cursor');
+                    cursor.setAttribute('x', (135 + inputText.textContent.length * 8));
+                    i++;
+                } else {
+                    clearInterval(typeInterval);
+                    setTimeout(() => {
+                        inputText.textContent = '';
+                        if (callback) callback();
+                    }, 500);
+                }
+            }, 100);
+        }
         
         // Make SVG focusable
         document.querySelector('svg').setAttribute('tabindex', '0');
