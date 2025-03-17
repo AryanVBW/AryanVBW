@@ -22,6 +22,9 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 </p>
 
+![Metrics](https://metrics.lecoq.io/aryanvbw?template=classic&stargazers=1&traffic=1&notable=1&gists=1&lines=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&stargazers=false&stargazers.days=14&stargazers.charts=true&stargazers.charts.type=classic&stargazers.worldmap=false&stargazers.worldmap.sample=0&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&lines.delay=0&notable=false&notable.from=all&notable.repositories=true&notable.indepth=true&notable.types=commit&notable.self=false&traffic=false&gists=false&config.timezone=Asia%2FCalcutta)
+
+
 <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 
 ## About Me
