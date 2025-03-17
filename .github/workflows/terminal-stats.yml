@@ -1,4 +1,4 @@
-name: Update Terminal SVG
+name: Update Terminal Animation
 on:
   schedule:
     - cron: "0 */6 * * *"  # Run every 6 hours
@@ -8,7 +8,7 @@ on:
     paths:
       - 'README.md'
       - '.github/workflows/terminal-stats.yml'
-      - '.github/scripts/generate_terminal_svg.py'
+      - '.github/scripts/generate_terminal_gif.py'
 
 jobs:
   update-terminal:
@@ -25,11 +25,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests PyGithub svgwrite beautifulsoup4
+          pip install requests PyGithub Pillow imageio beautifulsoup4
 
-      - name: Fetch GitHub stats and generate SVG
+      - name: Fetch GitHub stats and generate GIF
         run: |
-          python .github/scripts/generate_terminal_svg.py
+          python .github/scripts/generate_terminal_gif.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -38,4 +38,4 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Update terminal SVG" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update terminal animation" && git push)

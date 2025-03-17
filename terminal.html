@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek's GitHub Terminal</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --prompt-color: #7ee787;
+            --command-color: #e6edf3;
+            --output-color: #a5d6ff;
+            --error-color: #f85149;
+            --header-color: #161b22;
+            --help-color: #d2a8ff;
+            --stats-color: #79c0ff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .terminal-container {
+            width: 800px;
+            height: 500px;
+            background-color: var(--bg-color);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .terminal-header {
+            background-color: var(--header-color);
+            height: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+        
+        .terminal-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .close-button {
+            background-color: #f85149;
+        }
+        
+        .minimize-button {
+            background-color: #fac24c;
+        }
+        
+        .maximize-button {
+            background-color: #58a6ff;
+        }
+        
+        .terminal-title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .terminal-body {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+            line-height: 1.5;
+        }
+        
+        .prompt {
+            color: var(--prompt-color);
+            font-weight: bold;
+        }
+        
+        .command {
+            color: var(--command-color);
+        }
+        
+        .output {
+            color: var(--output-color);
+            margin-left: 20px;
+            white-space: pre-wrap;
+        }
+        
+        .help {
+            color: var(--help-color);
+        }
+        
+        .stats {
+            color: var(--stats-color);
+        }
+        
+        .error {
+            color: var(--error-color);
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: var(--text-color);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .line {
+            animation: fadeIn 0.3s ease-in;
+        }
+        
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 1s steps(30, end);
+        }
+    </style>
+</head>
+<body>
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-button close-button"></div>
+                <div class="terminal-button minimize-button"></div>
+                <div class="terminal-button maximize-button"></div>
+            </div>
+            <div class="terminal-title">vivek@github: ~/terminal</div>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <!-- Terminal content will be added here by JavaScript -->
+        </div>
+    </div>
+    
+    <script>
+        // GitHub stats data - this would normally be fetched from the GitHub API
+        const stats = {
+            login: "AryanVBW",
+            name: "Vivek Wagadare",
+            bio: "Passionate developer, coder, and technology geek",
+            location: "India",
+            public_repos: 30,
+            followers: 50,
+            following: 20,
+            created_at: "2020-01-01T00:00:00Z",
+            total_stars: 100,
+            contributions_last_year: 500,
+            pull_requests: 20,
+            merged_pull_requests: 15,
+            issues: 10,
+            top_repos: [
+                { name: "ANDRO", stars: 50, description: "A cloud based remote android managment suite" },
+                { name: "LinuxDroid", stars: 30, description: "Linux on Android e.g Kali nethuter,Ubatu GUI/CLI,kali GUI,Arch Linux CLI" },
+                { name: "WIFIjam", stars: 20, description: "Python WiFi Deauthentication Script" },
+                { name: "kali-Linux-Android", stars: 15, description: "Kali Linux for Android devices" },
+                { name: "AryanVBW", stars: 10, description: "GitHub profile repository" }
+            ]
+        };
+        
+        // Command outputs
+        const commandOutputs = {
+            help: [
+                "Available commands:",
+                "help        - Show this help message",
+                "whoami      - Display basic info about me",
+                "stats       - Show my GitHub statistics",
+                "repos       - List my top repositories",
+                "projects    - Show my featured projects",
+                "skills      - List my technical skills",
+                "contact     - Show contact information",
+                "clear       - Clear the terminal screen",
+                "date        - Show current date and time",
+                "echo [text] - Echo back your text"
+            ],
+            whoami: [
+                `Name: ${stats.name}`,
+                `GitHub: @${stats.login}`,
+                `Bio: ${stats.bio || "Not specified"}`,
+                `Location: ${stats.location || "Not specified"}`,
+                `GitHub user since: ${stats.created_at.split("T")[0]}`
+            ],
+            stats: [
+                "📊 GitHub Statistics",
+                "-------------------",
+                `Public Repositories: ${stats.public_repos}`,
+                `Total Stars: ${stats.total_stars}`,
+                `Followers: ${stats.followers}`,
+                `Following: ${stats.following}`,
+                `Pull Requests: ${stats.pull_requests}`,
+                `Merged PRs: ${stats.merged_pull_requests}`,
+                `Issues Opened: ${stats.issues}`,
+                `Contributions (Last Year): ${stats.contributions_last_year}`
+            ],
+            repos: [
+                "📚 Top Repositories",
+                "-------------------",
+                ...stats.top_repos.map((repo, i) => `${i+1}. ${repo.name} - ⭐ ${repo.stars} - ${repo.description}`)
+            ],
+            skills: [
+                "🛠️ Technical Skills",
+                "------------------",
+                "💻 Programming Languages: Python, JavaScript, Java",
+                "🌐 Web Technologies: HTML5, CSS3, GraphQL",
+                "🛠️ Frameworks & Libraries: React, Node.js, Django",
+                "📦 Databases: MongoDB, MySQL, PostgreSQL",
+                "🖥️ DevOps & Tools: Docker, Git, AWS",
+                "🔒 Cybersecurity & Ethical Hacking: Nmap, Metasploit, Wireshark, Burp Suite, Aircrack-ng, Nikto, WifiTe"
+            ],
+            projects: [
+                "🚀 Featured Projects",
+                "------------------",
+                "1. ANDRO - A cloud based remote android managment suite",
+                "   GitHub: https://github.com/AryanVBW/ANDRO",
+                "",
+                "2. LinuxDroid - Linux on Android e.g Kali nethuter,Ubatu GUI/CLI,kali GUI,Arch Linux CLI",
+                "   GitHub: https://github.com/AryanVBW/LinuxDroid",
+                "",
+                "3. WifiJAM - Python WiFi Deauthentication Script",
+                "   GitHub: https://github.com/AryanVBW/WIFIjam"
+            ],
+            contact: [
+                "📫 Contact Information",
+                "---------------------",
+                "Email: vivek.aryanvbw@gmail.com",
+                "Business Email: admin@AryanVBW.live",
+                "LinkedIn: https://www.linkedin.com/in/vivek-wagadare-b677a9216",
+                "Twitter: https://x.com/vivekwagadare",
+                "Instagram: https://instagram.com/vivekbw",
+                "Instagram (Tech): https://instagram.com/aryan_technolog1es",
+                "Website: https://vivek.aryanvbw.live"
+            ]
+        };
+        
+        // Terminal element
+        const terminal = document.getElementById('terminal-body');
+        
+        // Function to add a line to the terminal
+        function addLine(text, className = '') {
+            const line = document.createElement('div');
+            line.className = `line ${className}`;
+            line.innerHTML = text;
+            terminal.appendChild(line);
+            terminal.scrollTop = terminal.scrollHeight;
+            return line;
+        }
+        
+        // Function to simulate typing
+        async function typeCommand(command) {
+            return new Promise(resolve => {
+                const promptLine = addLine('<span class="prompt">vivek@github:~$</span> <span class="command typing"></span><span class="cursor"></span>');
+                const commandSpan = promptLine.querySelector('.command');
+                const cursor = promptLine.querySelector('.cursor');
+                
+                let i = 0;
+                const typeInterval = setInterval(() => {
+                    if (i < command.length) {
+                        commandSpan.textContent += command.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typeInterval);
+                        cursor.remove();
+                        setTimeout(resolve, 500);
+                    }
+                }, 100);
+            });
+        }
+        
+        // Function to execute a command
+        async function executeCommand(command) {
+            // Normalize command
+            command = command.trim().toLowerCase();
+            
+            // Handle built-in commands
+            if (commandOutputs[command]) {
+                for (const line of commandOutputs[command]) {
+                    await new Promise(resolve => setTimeout(resolve, 50));
+                    addLine(line, 'output');
+                }
+            } else if (command === 'clear') {
+                terminal.innerHTML = '';
+            } else if (command === 'date') {
+                addLine(new Date().toLocaleString(), 'output');
+            } else if (command.startsWith('echo ')) {
+                const text = command.substring(5);
+                addLine(text, 'output');
+            } else {
+                addLine(`Command not found: ${command}. Type 'help' to see available commands.`, 'error');
+            }
+            
+            return new Promise(resolve => setTimeout(resolve, 500));
+        }
+        
+        // Function to demonstrate the terminal
+        async function demoTerminal() {
+            // Add welcome message
+            addLine('Welcome to Vivek\'s GitHub Terminal! 👋', 'output');
+            addLine('This terminal showcases my GitHub profile in an interactive way.', 'output');
+            addLine('Type "help" to see available commands.', 'output');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Demo commands
+            const demoCommands = ['help', 'whoami', 'stats', 'skills', 'projects', 'repos'];
+            
+            for (const command of demoCommands) {
+                await typeCommand(command);
+                await executeCommand(command);
+                await new Promise(resolve => setTimeout(resolve, 1500));
+            }
+            
+            // Add final prompt
+            addLine('<span class="prompt">vivek@github:~$</span> <span class="cursor"></span>');
+        }
+        
+        // Start the demo when the page loads
+        window.onload = demoTerminal;
+    </script>
+</body>
+</html>
