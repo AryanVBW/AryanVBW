@@ -21,18 +21,10 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 </p>
 
-<!-- GitHub Terminal - Interactive Profile -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AryanVBW/AryanVBW/terminal.css">
-
-<div class="github-terminal" id="github-terminal">
-  <div class="terminal-output" id="terminal-output"></div>
-  <div class="terminal-input-line">
-    <span class="prompt" id="prompt">guest@github:~$</span>
-    <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false">
-  </div>
+<!-- GitHub Terminal - Interactive SVG Profile -->
+<div align="center">
+  <img src="terminal.svg" alt="Interactive Terminal" width="800" height="500">
 </div>
-
-<script src="https://cdn.jsdelivr.net/gh/AryanVBW/AryanVBW/terminal.js"></script>
 
 <p align="center">
 <img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/v.png">
@@ -43,7 +35,7 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 
 ## 💻 Interactive Terminal
 
-Try out the interactive terminal above! Type `help` to see available commands.
+Try out the interactive terminal above! Click on any command button to see the output. The terminal is updated every 6 hours with my latest GitHub stats.
 
 ## 👨‍💻 About Me
 

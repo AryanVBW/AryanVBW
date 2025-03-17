@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="500" version="1.1" width="800">
+  <defs>
+    <style type="text/css"><![CDATA[
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+        
+        .terminal {
+            font-family: 'Fira Code', monospace;
+            font-size: 14px;
+        }
+        .terminal-bg {
+            fill: #0d1117;
+            rx: 10;
+            ry: 10;
+        }
+        .terminal-header {
+            fill: #161b22;
+            rx: 10 10 0 0;
+            ry: 10 10 0 0;
+        }
+        .terminal-title {
+            fill: #c9d1d9;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .terminal-button {
+            r: 6;
+        }
+        .close-button {
+            fill: #f85149;
+        }
+        .minimize-button {
+            fill: #fac24c;
+        }
+        .maximize-button {
+            fill: #58a6ff;
+        }
+        .terminal-text {
+            fill: #c9d1d9;
+            font-size: 14px;
+        }
+        .prompt {
+            fill: #7ee787;
+            font-weight: bold;
+        }
+        .command {
+            fill: #e6edf3;
+        }
+        .output {
+            fill: #a5d6ff;
+        }
+        .error {
+            fill: #f85149;
+        }
+        .help {
+            fill: #d2a8ff;
+        }
+        .stats {
+            fill: #79c0ff;
+        }
+        .repos {
+            fill: #a5d6ff;
+        }
+        .contact {
+            fill: #ffab70;
+        }
+        .skills {
+            fill: #7ee787;
+        }
+        .projects {
+            fill: #d2a8ff;
+        }
+        .about {
+            fill: #79c0ff;
+        }
+        .welcome {
+            fill: #7ee787;
+            font-weight: bold;
+        }
+        .info {
+            fill: #79c0ff;
+        }
+    ]]></style>
+  </defs>
+  <rect class="terminal-bg" height="500" width="800" x="0" y="0"/>
+  <rect class="terminal-header" height="30" width="800" x="0" y="0"/>
+  <circle class="terminal-button close-button" cx="20" cy="15" r="1"/>
+  <circle class="terminal-button minimize-button" cx="45" cy="15" r="1"/>
+  <circle class="terminal-button maximize-button" cx="70" cy="15" r="1"/>
+  <text class="terminal-title" text-anchor="middle" x="400.0" y="20">AryanVBW's GitHub Terminal</text>
+  <text class="terminal welcome" x="20" y="60">Welcome to GitHub Terminal!</text>
+  <text class="terminal info" x="20" y="80">Type a command below or click on a suggested command:</text>
+  <g class="command-button" onclick="showCommand('help')">
+    <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="20" y="110.0"/>
+    <text class="terminal command" text-anchor="middle" x="70.0" y="130.0">help</text>
+  </g>
+  <g class="command-button" onclick="showCommand('whoami')">
+    <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="130" y="110.0"/>
+    <text class="terminal command" text-anchor="middle" x="180.0" y="130.0">whoami</text>
+  </g>
+  <g class="command-button" onclick="showCommand('stats')">
+    <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="240" y="110.0"/>
+    <text class="terminal command" text-anchor="middle" x="290.0" y="130.0">stats</text>
+  </g>
+  <g class="command-button" onclick="showCommand('repos')">
+    <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="20" y="150.0"/>
+    <text class="terminal command" text-anchor="middle" x="70.0" y="170.0">repos</text>
+  </g>
+  <g class="command-button" onclick="showCommand('skills')">
+    <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="130" y="150.0"/>
+    <text class="terminal command" text-anchor="middle" x="180.0" y="170.0">skills</text>
+  </g>
+  <g class="command-button" onclick="showCommand('projects')">
+    <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="240" y="150.0"/>
+    <text class="terminal command" text-anchor="middle" x="290.0" y="170.0">projects</text>
+  </g>
+  <g class="command-button" onclick="showCommand('contact')">
+    <rect fill="#21262d" height="30" rx="5" ry="5" stroke="#30363d" stroke-width="1" width="100" x="20" y="190.0"/>
+    <text class="terminal command" text-anchor="middle" x="70.0" y="210.0">contact</text>
+  </g>
+  <text class="terminal prompt" x="20" y="250.0">$ </text>
+  <rect fill="#c9d1d9" height="18" width="8" x="35" y="236.0">
+    <animate attributeName="opacity" dur="1s" repeatCount="indefinite" values="1;0;1"/>
+  </rect>
+  <script><![CDATA[
+        // Command output data
+        const commandOutputs = {
+            help: [
+                "Available commands:",
+                "help        - Show this help message",
+                "whoami      - Display basic info about me",
+                "stats       - Show my GitHub statistics",
+                "repos       - List my top repositories",
+                "projects    - Show my featured projects",
+                "skills      - List my technical skills",
+                "contact     - Show contact information"
+            ],
+            whoami: [
+                "Name: Vivek W",
+                "GitHub: @AryanVBW",
+                "Bio: 🛰 𝐒𝐢𝐦𝐩𝐥𝐢𝐜𝐢𝐭𝐲 𝐒𝐩𝐚𝐫𝐤𝐬 𝐈𝐧𝐧𝐨𝐯𝐚𝐭𝐢𝐨𝐧🛡️
+🌟 Dive into the Future: ✨𒆜🆅🅸🆅🅴🅺 🆆𒆜
+Studying in Newton school of Technology🚀",
+                "Location: india",
+                "GitHub user since: 2021-10-12"
+            ],
+            stats: [
+                "📊 GitHub Statistics",
+                "-------------------",
+                "Public Repositories: 106",
+                "Total Stars: 737",
+                "Followers: 137",
+                "Following: 29",
+                "Pull Requests: 54",
+                "Merged PRs: 19",
+                "Issues Opened: 31",
+                "Contributions (Last Year): 0"
+            ],
+            repos: [
+                "📚 Top Repositories",
+                "-------------------"
+            ],
+            skills: [
+                "🛠️ Technical Skills",
+                "------------------",
+                "💻 Programming Languages: Python, JavaScript, Java",
+                "🌐 Web Technologies: HTML5, CSS3, GraphQL",
+                "🛠️ Frameworks & Libraries: React, Node.js, Django",
+                "📦 Databases: MongoDB, MySQL, PostgreSQL",
+                "🖥️ DevOps & Tools: Docker, Git, AWS",
+                "🔒 Cybersecurity & Ethical Hacking: Nmap, Metasploit, Wireshark, Burp Suite, Aircrack-ng, Nikto, WifiTe"
+            ],
+            projects: [
+                "🚀 Featured Projects",
+                "------------------",
+                "1. ANDRO - A cloud based remote android managment suite",
+                "   GitHub: https://github.com/AryanVBW/ANDRO",
+                "",
+                "2. LinuxDroid - Linux on Android e.g Kali nethuter,Ubatu GUI/CLI,kali GUI,Arch Linux CLI",
+                "   GitHub: https://github.com/AryanVBW/LinuxDroid",
+                "",
+                "3. WifiJAM - Python WiFi Deauthentication Script",
+                "   GitHub: https://github.com/AryanVBW/WIFIjam"
+            ],
+            contact: [
+                "📫 Contact Information",
+                "---------------------",
+                "Email: vivek.aryanvbw@gmail.com",
+                "Business Email: admin@AryanVBW.live",
+                "LinkedIn: https://www.linkedin.com/in/vivek-wagadare-b677a9216",
+                "Twitter: https://x.com/vivekwagadare",
+                "Instagram: https://instagram.com/vivekbw",
+                "Instagram (Tech): https://instagram.com/aryan_technolog1es",
+                "Website: https://vivek.aryanvbw.live"
+            ]
+        };
+        
+        // Add top repos to repos command
+        const reposList = ["1. LinuxDroid - ⭐ 357 - The most powerful security toolkit for Android: without rooting your device. Run security tools like Nmap, Metasploit, and Wireshark on your Android device without voiding your warranty. Access a wide range of penetration testing tools and utilities, right from your Android phone or tablet.","2. AiVoiceClonerPRO - ⭐ 49 - Revolutionize Your Voice with AI Voice Cloner! Transform Your Speech into Your Favorite Celebrity's or Your Customized Voice. Our Cutting-edge Tool Converts Text or Any Audio into Your Desired Voice – Your Voice, Your Way","3. Andro-CLI - ⭐ 47 - Exploitation-Framework for Android devices - Framework that allows you to search for vulnerable android devices across the world and exploit them. A Simple android remote administration tool using sockets. It uses java on the client side and python on the server side ","4. Kali-Linux-for-Android - ⭐ 44 - Transform your Android device into a cybersecurity playground with Kali Magic! 🚀","5. ANDRO - ⭐ 43 - ANDRO Unleash Mobile Security with our Android Exploitation and Analysis Tool. Identify vulnerabilities, reverse engineer apps, and fortify defenses with ease. Stay ahead of threats and redefine mobile protection today!",];
+commandOutputs.repos = commandOutputs.repos.concat(reposList);
+
+        // Function to show command output
+        function showCommand(command) {
+            // Clear previous output
+            const outputArea = document.getElementById('output-area');
+            while (outputArea.firstChild) {
+                outputArea.removeChild(outputArea.firstChild);
+            }
+            
+            // Add command to prompt
+            const promptText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            promptText.setAttribute("x", "20");
+            promptText.setAttribute("y", "350");
+            promptText.setAttribute("class", "terminal prompt");
+            promptText.textContent = "$ ";
+            outputArea.appendChild(promptText);
+            
+            const commandText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            commandText.setAttribute("x", "35");
+            commandText.setAttribute("y", "350");
+            commandText.setAttribute("class", "terminal command");
+            commandText.textContent = command;
+            outputArea.appendChild(commandText);
+            
+            // Add output
+            if (commandOutputs[command]) {
+                let yPos = 380;
+                commandOutputs[command].forEach(line => {
+                    const outputLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                    outputLine.setAttribute("x", "20");
+                    outputLine.setAttribute("y", yPos.toString());
+                    outputLine.setAttribute("class", `terminal output ${command}`);
+                    outputLine.textContent = line;
+                    outputArea.appendChild(outputLine);
+                    yPos += 20;
+                });
+            } else {
+                const errorLine = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                errorLine.setAttribute("x", "20");
+                errorLine.setAttribute("y", "380");
+                errorLine.setAttribute("class", "terminal error");
+                errorLine.textContent = `Command not found: ${command}. Type 'help' to see available commands.`;
+                outputArea.appendChild(errorLine);
+            }
+        }
+        
+        // Show help by default
+        window.onload = function() {
+            showCommand('help');
+        };
+    ]]></script>
+  <g id="output-area"/>
+</svg>
