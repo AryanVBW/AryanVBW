@@ -15,7 +15,7 @@ jobs:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
           
-          user: PragmaTwice
+          user: AryanVBW
           base: header, activity, community, repositories, metadata
           filename: metrics-main.svg
           template: classic
@@ -34,7 +34,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           
           plugin_languages: yes
-          plugin_languages_ignored: CMake, HTML, CSS, QML, QMake, NSIS, Makefile, PowerShell, NASL
+          plugin_languages_ignored: HTML, CSS, Makefile, PowerShell
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
           plugin_languages_details: percentage
@@ -46,10 +46,9 @@ jobs:
           plugin_notable_filter: stars:>200 forks:>50
           plugin_notable_from: organization
           plugin_notable_repositories: yes
-          plugin_notable_skipped: rms-support-letter/rms-support-letter.github.io
           plugin_notable_indepth: no
           
-          user: PragmaTwice
+          user: AryanVBW
           base: ''
           filename: metrics-lang-notable.svg
           template: classic

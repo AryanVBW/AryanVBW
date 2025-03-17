@@ -20,10 +20,8 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 <p align="center">
 <br/>
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
-<p align="center">
-<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/v.png">
 </p>
-</p>
+
 <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 
 ## About Me
@@ -33,8 +31,7 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
 - 📫 How to reach me: [vivek.AryanVBW](mailto:vivek.aryanvbw@gmail.com)
 - 😄 Pronouns: he
 
-┌─[vivek@github]─[~/terminal]
-└──╼ $Tech Stack
+##Tech Stack
 
 Here are some of the technologies and tools I frequently work with:
 
@@ -70,7 +67,8 @@ Feel free to reach out, and let's build something amazing together! 🚀
 <img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD-removebg-preview.png" height="50"></p>
 
 [![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=AryanVBW&bg_color=000000&color=53f547&line=65f207&point=2c42ed&area=true&hide_border=true)](https://github.com/AryanVBW/github-readme-activity-graph)
-<!-- <a href="https://github.com/AryanVBW">
+
+<a href="https://github.com/AryanVBW">
   <img align="center" width="49%" src="./metrics-main.svg" />
 </a>
 <a href="https://github.com/AryanVBW">
