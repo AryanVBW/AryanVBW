@@ -22,7 +22,6 @@ I'm a passionate developer, coder, and technology geek with a knack for hacking 
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 </p>
 
-![Metrics](https://metrics.lecoq.io/aryanvbw?template=classic&stargazers=1&traffic=1&notable=1&gists=1&lines=1&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&stargazers=false&stargazers.days=14&stargazers.charts=true&stargazers.charts.type=classic&stargazers.worldmap=false&stargazers.worldmap.sample=0&lines=false&lines.sections=base&lines.repositories.limit=4&lines.history.limit=1&lines.delay=0&notable=false&notable.from=all&notable.repositories=true&notable.indepth=true&notable.types=commit&notable.self=false&traffic=false&gists=false&config.timezone=Asia%2FCalcutta)
 
 
 <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
@@ -71,12 +70,6 @@ Feel free to reach out, and let's build something amazing together! 🚀
 
 [![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=AryanVBW&bg_color=000000&color=53f547&line=65f207&point=2c42ed&area=true&hide_border=true)](https://github.com/AryanVBW/github-readme-activity-graph)
 
-<a href="https://github.com/AryanVBW">
-  <img align="center" width="49%" src="./metrics-main.svg" />
-</a>
-<a href="https://github.com/AryanVBW">
-  <img align="center" width="49%" src="./metrics-lang-notable.svg" />
-</a>
 
  <!-- <div style="display: flex; justify-content: space-between;">
     <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=AryanVBW&theme=aura" alt="Repos per Language" width="45%" />
