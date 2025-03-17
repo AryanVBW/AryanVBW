@@ -15,7 +15,7 @@ jobs:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
           
-          user: AryanVBW
+          user: PragmaTwice
           base: header, activity, community, repositories, metadata
           filename: metrics-main.svg
           template: classic
@@ -49,7 +49,7 @@ jobs:
           plugin_notable_skipped: rms-support-letter/rms-support-letter.github.io
           plugin_notable_indepth: no
           
-          user: AryanVBW
+          user: PragmaTwice
           base: ''
           filename: metrics-lang-notable.svg
           template: classic

@@ -1,199 +1,73 @@
-<div align="center">
-
-<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="100">
-
-# <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&pause=1000&color=00BFFF&center=true&vCenter=true&random=false&width=435&lines=Hello%2C+I'm+Vivek+Wagdare+%F0%9F%91%8B;Welcome+to+my+GitHub!;Passionate+Developer;Cybersecurity+Enthusiast;Tech+Explorer" alt="Typing SVG" />
-
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00BFFF&center=true&vCenter=true&width=435&lines=Developer+%7C+Hacker+%7C+Creator)](https://github.com/AryanVBW)
-
-</div>
-
 <p align="center">
-I'm a passionate developer, cybersecurity enthusiast, and technology explorer with a knack for hacking into challenges and solving them one line of code at a time. 🚀
+<img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="80">
 </p>
-
 <div align="center">
+<h2 style="text-align: center; color: #0074D9;">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0074D9&random=false&width=435&lines=Hello%2C+I'm+Vivek+Wagdare+👋" alt="Typing SVG" />
+</h2>
 
-[![GitHub followers](https://img.shields.io/github/followers/AryanVBW?style=for-the-badge&logo=github&logoColor=white&labelColor=black&color=20B2AA)](https://github.com/AryanVBW)
-[![Twitter Follow](https://img.shields.io/twitter/follow/vivekwagadare?style=for-the-badge&logo=twitter&logoColor=white&labelColor=1DA1F2&color=1DA1F2)](https://x.com/vivekwagadare)
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/vivek-wagadare)
-[![Instagram @Vivek](https://img.shields.io/badge/Instagram-@Vivek-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/vivekbw)
-[![Instagram @Aryan_Technologies](https://img.shields.io/badge/Instagram-@Aryan_Technologies-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/aryan_technolog1es)
-[![Website](https://img.shields.io/badge/Website-AryanVBW.live-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://vivek.aryanvbw.live)
 
+I'm a passionate developer, coder, and technology geek with a knack for hacking into challenges and solving them one line of code at a time. 🚀
+
+[![GitHub followers](https://img.shields.io/github/followers/yourusername?label=Follow&style=social)](https://github.com/Aryanvbw)
+[![Twitter Follow](https://img.shields.io/twitter/follow/yourtwitterhandle?label=Follow&style=social)](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/vivek-wagadare)
+[![Twitter](https://img.shields.io/badge/-Twitter-blue?style=flat&logo=Twitter&logoColor=white)](https://twitter.com/vivekwagadare)
+<a href="https://instagram.com/vivekbw"><img src="https://img.shields.io/badge/Instagram-Follow%20@Vivek-E1306C"/></a>
+
+<a href="https://instagram.com/aryan_technolog1es"><img src="https://img.shields.io/badge/Instagram-Follow%20@Aryan_Technologies-E1306C"/></a>
 </div>
-
 <p align="center">
+<br/>
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
-</p>
-
-<!-- GitHub Terminal - Interactive Profile -->
 <p align="center">
-  <a href="https://vivek.aryanvbw.live/terminal.html" target="_blank">
-    <img src="terminal.gif" alt="Animated Terminal" width="800">
-  </a>
+<img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/v.png">
 </p>
-
-<p align="center">
-  <a href="https://vivek.aryanvbw.live/terminal.html" target="_blank">👆 Click on the terminal to try the fully interactive version!</a>
 </p>
+<img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 
-<p align="center">
-  <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
-</p>
-
-## 💻 Terminal Portfolio
-
-<div align="center">
-
-[![Terminal Demo](https://img.shields.io/badge/✨-Interactive_Terminal-00BFFF?style=for-the-badge&logo=gnometerminal&logoColor=white)](https://vivek.aryanvbw.live/terminal.html)
-[![Updated](https://img.shields.io/badge/Updated-Every_6_Hours-brightgreen?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/AryanVBW/AryanVBW/actions)
-[![View Source](https://img.shields.io/badge/View_Source-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AryanVBW/AryanVBW/blob/main/terminal.html)
-
-</div>
-
-```bash
-┌─[vivek@github]─[~/terminal]
-└──╼ $ help
-
-Available commands:
-  help        - Show this help message
-  whoami      - Display basic info about me
-  stats       - Show my GitHub statistics
-  skills      - List my technical skills
-  repos       - List my top repositories
-  projects    - Show my featured projects
-  contact     - Show contact information
-  clear       - Clear the terminal screen
-```
-
-```bash
-┌─[vivek@github]─[~/terminal]
-└──╼ $ whoami
-
-Name: Vivek Wagadare
-GitHub: @AryanVBW
-Bio: Passionate developer, cybersecurity enthusiast, and technology explorer
-Location: India
-```
-
-```bash
-┌─[vivek@github]─[~/terminal]
-└──╼ $ stats
-
-📊 GitHub Statistics
--------------------
-🔷 Repositories: 30+
-⭐ Total Stars: 100+
-🔱 Contributions: 500+
-👥 Followers: 50+
-```
-
-<details>
-<summary>🔥 Try the full interactive terminal</summary>
-
-### Experience the full interactive terminal!
-
-I've created a fully interactive terminal experience where you can:
-- Type real commands and see responses
-- Navigate command history with arrow keys
-- See real-time GitHub stats
-- Explore all my projects and skills
-
-<div align="center">
-
-[![Open Terminal](https://img.shields.io/badge/Open_Interactive_Terminal-4CAF50?style=for-the-badge&logo=gnometerminal&logoColor=white)](https://vivek.aryanvbw.live/terminal.html)
-
-</div>
-
-</details>
-
-## 👨‍💻 About Me
-
-```bash
-┌─[vivek@github]─[~/about]
-└──╼ $ cat profile.txt
-```
+## About Me
 
 - 🔭 I'm currently working on https://vivek.aryanvbw.live
-- 🌱 I'm constantly learning and exploring new technologies and tools
-- 🚀 I love building innovative solutions to complex problems
+- 🌱 I'm constantly learning and exploring new technologies and tools.
 - 📫 How to reach me: [vivek.AryanVBW](mailto:vivek.aryanvbw@gmail.com)
 - 😄 Pronouns: he
 
-## 🛠️ Tech Stack
-
-```bash
 ┌─[vivek@github]─[~/terminal]
-└──╼ $ skills
+└──╼ $Tech Stack
 
-🔧 Technical Skills
-------------------
-```
+Here are some of the technologies and tools I frequently work with:
 
-- 💻 **Programming Languages**: Python, JavaScript, Java
-- 🌐 **Web Technologies**: HTML5, CSS3, GraphQL
-- 🛠️ **Frameworks & Libraries**: React, Node.js, Django
-- 📦 **Databases**: MongoDB, MySQL, PostgreSQL
-- 🖥️ **DevOps & Tools**: Docker, Git, AWS
-- 🔒 **Cybersecurity & Ethical Hacking**: Nmap, Metasploit, Wireshark, Burp Suite, Aircrack-ng, Nikto, WifiTe
+- 💻 Programming Languages:e.g., Python, JavaScript, Java
+- 🛠️ Frameworks & Libraries: e.g., React, Node.js, Django
+- 🌐 Web Technologies:e.g., HTML5, CSS3, GraphQL
+- 📦 Databases: e.g., MongoDB, MySQL, PostgreSQL
+- 🖥️ DevOps & Tools:e.g., Docker, Git, AWS
+- 🔒 Cybersecurity & Ethical Hacking:Nmap (Network Mapper),Metasploit,Wireshark,Burp Suite,Aircrack-ng,Nikto,WifiTe etc.
 
-## 🚀 Featured Projects
+## Projects
 
-```bash
-┌─[vivek@github]─[~/terminal]
-└──╼ $ projects
+Here are a few projects I'm proud of:
 
-🚀 Featured Projects
-------------------
-```
+- [ANDRO](https://github.com/AryanVBW/ANDRO): A cloud based remote android managment suite.
+- [LinuxDroid](https://github.com/AryanVBW/LinuxDroid): Linux on Android e.g Kali nethuter,Ubatu GUI/CLI,kali GUI,Arch Linux CLI.
+- [WifiJAM](https://github.com/AryanVBW/WIFIjam):Python WiFi Deauthentication Script.
 
-- [**ANDRO**](https://github.com/AryanVBW/ANDRO): A cloud-based remote Android management suite
-- [**LinuxDroid**](https://github.com/AryanVBW/LinuxDroid): Linux on Android (Kali NetHunter, Ubuntu GUI/CLI, Kali GUI, Arch Linux CLI)
-- [**WifiJAM**](https://github.com/AryanVBW/WIFIjam): Python WiFi Deauthentication Script
+## Connect with Me
 
-Type `projects` in the terminal above for more details!
+Let's connect and collaborate on exciting projects:
 
-## 🔗 Connect with Me
-
-```bash
-┌─[vivek@github]─[~/terminal]
-└──╼ $ contact
-
-📬 Contact Information
----------------------
-```
-
-- 📧 Email: [vivek.aryanvbw@gmail.com](mailto:vivek.aryanvbw@gmail.com)
-- 📧 Business Email: [admin@AryanVBW.live](mailto:admin@AryanVBW.live)
+- 📧 Email: [my@gmail.com](mailto:vivek.aryanvbw@gmail.com)
+- 📧 Business Email: [Business.Mail](mailto:admin@AryanVBW.live)
 - 💼 LinkedIn: [@vivekwagadare](https://www.linkedin.com/in/vivek-wagadare-b677a9216)
 - 🐦 Twitter: [@vivekwagadare](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
-- 🌐 Web store: [Tech-Shop](https://view.aryanvbw.live)
-- <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@vivekbw](https://instagram.com/vivekbw?igshid=NGVhN2U2NjQ0Yg==)
+- 🌐 Web store: [TEch-Shop](https://view.aryanvbw.live)
+- <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@vivek](https://instagram.com/vivekbw?igshid=NGVhN2U2NjQ0Yg==)
 - <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@Aryan_Technologies](https://instagram.com/aryan_technolog1es?igshid=MzMyNGUyNmU2YQ==)
 
-Type `contact` in the terminal above to see my contact information!
-
-```bash
-┌─[vivek@github]─[~/terminal]
-└──╼ $ echo "Feel free to reach out, and let's build something amazing together! 🚀"
 Feel free to reach out, and let's build something amazing together! 🚀
-
-┌─[vivek@github]─[~/terminal]
-└──╼ $ exit
-Logging out...
-```
-
 <p align="center">
 <img src="https://github.com/AryanVBW/Logo/releases/download/L1/AT-HD-removebg-preview.png" height="50"></p>
-
-```bash
-┌─[vivek@github]─[~/terminal]
-└──╼ $ show-activity
-
-📈 GitHub Activity Graph
-----------------------
-```
 
 [![github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=AryanVBW&bg_color=000000&color=53f547&line=65f207&point=2c42ed&area=true&hide_border=true)](https://github.com/AryanVBW/github-readme-activity-graph)
 <!-- <a href="https://github.com/AryanVBW">
