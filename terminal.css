@@ -1,0 +1,113 @@
+/* GitHub Terminal CSS */
+.github-terminal {
+  background-color: #0d1117;
+  border-radius: 8px;
+  color: #e6edf3;
+  font-family: 'Courier New', monospace;
+  height: 400px;
+  margin: 20px 0;
+  overflow-y: auto;
+  padding: 12px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid #30363d;
+}
+
+.terminal-output {
+  margin-bottom: 10px;
+}
+
+.terminal-line {
+  line-height: 1.5;
+  margin: 2px 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.terminal-input-line {
+  display: flex;
+  margin-top: 10px;
+}
+
+.prompt {
+  color: #7ee787;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.terminal-input {
+  background-color: transparent;
+  border: none;
+  caret-color: #e6edf3;
+  color: #e6edf3;
+  flex-grow: 1;
+  font-family: 'Courier New', monospace;
+  font-size: inherit;
+  outline: none;
+  padding: 0;
+}
+
+/* Terminal line types */
+.terminal-line.welcome {
+  color: #7ee787;
+  font-weight: bold;
+}
+
+.terminal-line.info {
+  color: #79c0ff;
+}
+
+.terminal-line.error {
+  color: #f85149;
+}
+
+.terminal-line.command {
+  color: #e6edf3;
+}
+
+.terminal-line.help {
+  color: #d2a8ff;
+}
+
+.terminal-line.stats {
+  color: #79c0ff;
+}
+
+.terminal-line.repos {
+  color: #a5d6ff;
+}
+
+.terminal-line.contact {
+  color: #ffab70;
+}
+
+.terminal-line.skills {
+  color: #7ee787;
+}
+
+.terminal-line.projects {
+  color: #d2a8ff;
+}
+
+.terminal-line.about {
+  color: #79c0ff;
+}
+
+.terminal-line.date {
+  color: #e6edf3;
+}
+
+.terminal-line.echo {
+  color: #e6edf3;
+}
+
+.terminal-line.ls {
+  color: #a5d6ff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .github-terminal {
+    height: 300px;
+  }
+}

@@ -9,60 +9,84 @@
 
 I'm a passionate developer, coder, and technology geek with a knack for hacking into challenges and solving them one line of code at a time. 🚀
 
-[![GitHub followers](https://img.shields.io/github/followers/yourusername?label=Follow&style=social)](https://github.com/Aryanvbw)
-[![Twitter Follow](https://img.shields.io/twitter/follow/yourtwitterhandle?label=Follow&style=social)](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
+[![GitHub followers](https://img.shields.io/github/followers/AryanVBW?label=Follow&style=social)](https://github.com/AryanVBW)
+[![Twitter Follow](https://img.shields.io/twitter/follow/vivekwagadare?label=Follow&style=social)](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/vivek-wagadare)
 [![Twitter](https://img.shields.io/badge/-Twitter-blue?style=flat&logo=Twitter&logoColor=white)](https://twitter.com/vivekwagadare)
 <a href="https://instagram.com/vivekbw"><img src="https://img.shields.io/badge/Instagram-Follow%20@Vivek-E1306C"/></a>
-
 <a href="https://instagram.com/aryan_technolog1es"><img src="https://img.shields.io/badge/Instagram-Follow%20@Aryan_Technologies-E1306C"/></a>
 </div>
+
 <p align="center">
-<br/>
   <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
+</p>
+
+<!-- GitHub Terminal - Interactive Profile -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AryanVBW/AryanVBW/terminal.css">
+
+<div class="github-terminal" id="github-terminal">
+  <div class="terminal-output" id="terminal-output"></div>
+  <div class="terminal-input-line">
+    <span class="prompt" id="prompt">guest@github:~$</span>
+    <input type="text" class="terminal-input" id="terminal-input" autocomplete="off" spellcheck="false">
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/AryanVBW/AryanVBW/terminal.js"></script>
+
 <p align="center">
 <img src="https://github.com/AryanVBW/AryanVBW/releases/download/L2/v.png">
 </p>
+<p align="center">
+  <img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 </p>
-<img src="https://github.com/AryanVBW/AryanVBW/blob/e7c43b9c8e4e68b1b93967704dc8158b2ff8e552/line.gif" width="900">
 
-## About Me
+## 💻 Interactive Terminal
+
+Try out the interactive terminal above! Type `help` to see available commands.
+
+## 👨‍💻 About Me
 
 - 🔭 I'm currently working on https://vivek.aryanvbw.live
-- 🌱 I'm constantly learning and exploring new technologies and tools.
+- 🌱 I'm constantly learning and exploring new technologies and tools
+- 🚀 I love building innovative solutions to complex problems
 - 📫 How to reach me: [vivek.AryanVBW](mailto:vivek.aryanvbw@gmail.com)
 - 😄 Pronouns: he
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 Here are some of the technologies and tools I frequently work with:
 
-- 💻 Programming Languages:e.g., Python, JavaScript, Java
-- 🛠️ Frameworks & Libraries: e.g., React, Node.js, Django
-- 🌐 Web Technologies:e.g., HTML5, CSS3, GraphQL
-- 📦 Databases: e.g., MongoDB, MySQL, PostgreSQL
-- 🖥️ DevOps & Tools:e.g., Docker, Git, AWS
-- 🔒 Cybersecurity & Ethical Hacking:Nmap (Network Mapper),Metasploit,Wireshark,Burp Suite,Aircrack-ng,Nikto,WifiTe etc.
+- 💻 **Programming Languages**: Python, JavaScript, Java
+- 🌐 **Web Technologies**: HTML5, CSS3, GraphQL
+- 🛠️ **Frameworks & Libraries**: React, Node.js, Django
+- 📦 **Databases**: MongoDB, MySQL, PostgreSQL
+- 🖥️ **DevOps & Tools**: Docker, Git, AWS
+- 🔒 **Cybersecurity & Ethical Hacking**: Nmap, Metasploit, Wireshark, Burp Suite, Aircrack-ng, Nikto, WifiTe
 
-## Projects
+## 🚀 Featured Projects
 
 Here are a few projects I'm proud of:
 
-- [ANDRO](https://github.com/AryanVBW/ANDRO): A cloud based remote android managment suite.
-- [LinuxDroid](https://github.com/AryanVBW/LinuxDroid): Linux on Android e.g Kali nethuter,Ubatu GUI/CLI,kali GUI,Arch Linux CLI.
-- [WifiJAM](https://github.com/AryanVBW/WIFIjam):Python WiFi Deauthentication Script.
+- [**ANDRO**](https://github.com/AryanVBW/ANDRO): A cloud-based remote Android management suite
+- [**LinuxDroid**](https://github.com/AryanVBW/LinuxDroid): Linux on Android (Kali NetHunter, Ubuntu GUI/CLI, Kali GUI, Arch Linux CLI)
+- [**WifiJAM**](https://github.com/AryanVBW/WIFIjam): Python WiFi Deauthentication Script
 
-## Connect with Me
+Type `projects` in the terminal above for more details!
+
+## 🔗 Connect with Me
 
 Let's connect and collaborate on exciting projects:
 
-- 📧 Email: [my@gmail.com](mailto:vivek.aryanvbw@gmail.com)
-- 📧 Business Email: [Business.Mail](mailto:admin@AryanVBW.live)
+- 📧 Email: [vivek.aryanvbw@gmail.com](mailto:vivek.aryanvbw@gmail.com)
+- 📧 Business Email: [admin@AryanVBW.live](mailto:admin@AryanVBW.live)
 - 💼 LinkedIn: [@vivekwagadare](https://www.linkedin.com/in/vivek-wagadare-b677a9216)
 - 🐦 Twitter: [@vivekwagadare](https://x.com/vivekwagadare?t=nuIH3LUbo8o2o1Rjxot-hA&s=09)
-- 🌐 Web store: [TEch-Shop](https://view.aryanvbw.live)
-- <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@vivek](https://instagram.com/vivekbw?igshid=NGVhN2U2NjQ0Yg==)
+- 🌐 Web store: [Tech-Shop](https://view.aryanvbw.live)
+- <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@vivekbw](https://instagram.com/vivekbw?igshid=NGVhN2U2NjQ0Yg==)
 - <img src="https://github.com/AryanVBW/AryanVBW/blob/main/Instagram.png" height="15"> Instagram: [@Aryan_Technologies](https://instagram.com/aryan_technolog1es?igshid=MzMyNGUyNmU2YQ==)
+
+Type `contact` in the terminal above to see my contact information!
 
 Feel free to reach out, and let's build something amazing together! 🚀
 <p align="center">
