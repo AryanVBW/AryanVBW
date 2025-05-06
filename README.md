@@ -2,10 +2,6 @@
 <img src="https://github.com/AryanVBW/kali-Linux-Android/releases/download/1/removebackground.png" height="80">
 </p>
 <div align="center">
-<h2 style="text-align: center; color: #0074D9;">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=0074D9&random=false&width=435&lines=Hello%2C+I'm+Vivek+Wagdare+👋" alt="Typing SVG" />
-</h2>
-
 
 I'm a passionate developer, coder, and technology geek with a knack for hacking into challenges and solving them one line of code at a time. 🚀
 
